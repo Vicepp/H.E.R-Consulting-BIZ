@@ -1,0 +1,37 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": false,
+  "trailingSlash": false,
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        { "key": "X-Content-Type-Options", "value": "nosniff" },
+        { "key": "X-Frame-Options", "value": "SAMEORIGIN" },
+        { "key": "Referrer-Policy", "value": "strict-origin-when-cross-origin" }
+      ]
+    }
+  ],
+  "redirects": [
+    { "source": "/about-us", "destination": "/about.html", "permanent": true },
+    { "source": "/contact-us", "destination": "/contact.html", "permanent": true },
+    { "source": "/our-portfolio", "destination": "/portfolio.html", "permanent": true },
+    { "source": "/federal-angencies", "destination": "/portfolio-federal.html", "permanent": true },
+    { "source": "/local-government-agencies", "destination": "/portfolio-local.html", "permanent": true },
+    { "source": "/non-profits", "destination": "/portfolio-nonprofits.html", "permanent": true },
+    { "source": "/federal-contracting-2", "destination": "/federal-contracting.html", "permanent": true },
+    { "source": "/grant-readiness", "destination": "/grant-readiness.html", "permanent": true },
+    { "source": "/speaking-engagement", "destination": "/speaking-engagement.html", "permanent": true },
+    { "source": "/program-planning-management", "destination": "/program-planning-management.html", "permanent": true },
+    { "source": "/program-evaluation-impact", "destination": "/program-evaluation-impact.html", "permanent": true },
+    { "source": "/state-contracting", "destination": "/state-contracting.html", "permanent": true },
+    { "source": "/services", "destination": "/services.html", "permanent": true },
+    { "source": "/my-account", "destination": "/contact.html", "permanent": false }
+  ]
+}

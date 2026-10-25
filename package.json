@@ -1,0 +1,14 @@
+{
+  "name": "her-consulting-website",
+  "version": "1.0.0",
+  "private": true,
+  "description": "HER Consulting LLC — static marketing site (Vercel-ready)",
+  "scripts": {
+    "build": "python _src/build.py",
+    "dev": "npx --yes serve . -l 3001",
+    "start": "npm run dev",
+    "preview": "npm run build && npm run dev"
+  },
+  "keywords": ["public-health", "consulting", "static-site"],
+  "license": "UNLICENSED"
+}
