@@ -159,10 +159,16 @@ TEAM = [
         "Temitope Adeoye Olenloa is an applied researcher advancing equity in education, workforce, and community systems. She designs culturally responsive environments, facilitates planning, and helps organizations turn data into action, centering communities historically excluded from decisions.",
     ),
     (
-        "team-tope.jpg",
-        "TOPE AMUSA",
-        "Data Analyst &amp; Stastician",
-        "Tope is a public health statistician specializing in biostatistics, epidemiology, and data analytics. With expertise in infectious diseases, cancer research, and data visualization, Tope is skilled in using tools like R, SAS, and Python to enhance public health outcomes.",
+        "team-olusola.jpg",
+        "DR. OLUSOLA OMISAKIN",
+        "Quantitative Analyst &amp; Demographer",
+        "Dr. Olusola Omisakin is a quantitative analyst and demographer specializing in population health research. He applies demographic methods, statistical modeling, and data management to translate complex findings into actionable insights for policy, program development, and organizational decision-making.",
+    ),
+    (
+        "team-hadya.jpg",
+        "HADYA SOW",
+        "Qualitative Research &amp; Health Communications",
+        "With a strong foundation in community engagement and qualitative methodologies, Hadya Sow specializes in translating lived experiences and stakeholder perspectives into evidence-based results. She is experienced in utilizing thematic analysis and storytelling to evaluate and elevate health communication products and public health programs.",
     ),
     (
         "team-molly.jpg",

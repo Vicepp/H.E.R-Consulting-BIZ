@@ -7,9 +7,6 @@ chrome stays identical across all 15 pages.
 SITE_NAME = "HER Consulting LLC"
 SITE_URL = "https://herconsultingbiz.com"
 EMAIL = "lola@herconsultingbiz.com"
-PHONE = "217-454-5192"
-PHONE_HREF = "+12174545192"
-ADDRESS = "Avon, IN 46123"
 CERT = "An Indiana Certified Minority Business Enterprise"
 PARTNERS_COPY = (
     "We proudly collaborate with a diverse range of clients and partners across "
@@ -42,8 +39,6 @@ ICONS = {
     "check": '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6L9 17l-5-5"/></svg>',
     "badge": '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 2l2.4 4.9 5.4.8-3.9 3.8.9 5.4-4.8-2.5-4.8 2.5.9-5.4L4.2 7.7l5.4-.8z"/></svg>',
     "mail": '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="4" width="20" height="16" rx="2.5"/><path d="m2.5 6.5 9.5 6.5 9.5-6.5"/></svg>',
-    "phone": '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.2a2 2 0 0 1 2.1-.5c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>',
-    "pin": '<svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>',
     "up": '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5M5 12l7-7 7 7"/></svg>',
 }
 
@@ -97,7 +92,6 @@ def header(active: str) -> str:
     <p class="topbar__badge">{ICONS['badge']} {CERT}</p>
     <div class="topbar__links">
       <a href="mailto:{EMAIL}">{ICONS['mail']} {EMAIL}</a>
-      <a href="tel:{PHONE_HREF}">{ICONS['phone']} {PHONE}</a>
     </div>
   </div>
 </div>
@@ -149,7 +143,13 @@ def footer() -> str:
       <div class="footer-brand">
         <img src="assets/img/logo.png" alt="HER Consulting LLC" width="74" height="42">
         <p>Public Health Awareness. Action. Impact. Partnering with organizations and individuals to strengthen Public Health Awareness, Access, and Action.</p>
-        <span class="footer-badge">{ICONS['badge']} {CERT}</span>
+        <span class="hero__chip footer-badge">
+          <img src="assets/img/mbe-badge.jpg" alt="" width="40" height="40">
+          <span>
+            <b>Certified MBE</b>
+            <span>State of Indiana</span>
+          </span>
+        </span>
       </div>
 
       <div>
@@ -167,9 +167,7 @@ def footer() -> str:
       <div>
         <h5>Get in touch</h5>
         <div class="footer-contact">
-          <div>{ICONS['pin']} <span>{SITE_NAME}<br>{ADDRESS}</span></div>
           <a href="mailto:{EMAIL}">{ICONS['mail']} <span>{EMAIL}</span></a>
-          <a href="tel:{PHONE_HREF}">{ICONS['phone']} <span>{PHONE}</span></a>
         </div>
         <a class="btn btn--sm" style="margin-top:1.4rem" href="contact.html">Start a conversation {ICONS['arrow']}</a>
       </div>
@@ -238,7 +236,7 @@ def cta_section(
   <div class="wrap">
     <div class="cta-band reveal">
       <div>
-        <span class="eyebrow" style="color:#7fd4ff">Under HER Leadership</span>
+        <span class="eyebrow">Under HER Leadership</span>
         <h2>{title}</h2>
         <p>{body}</p>
       </div>
@@ -268,16 +266,16 @@ DOCUMENT = """<!DOCTYPE html>
 <meta property="og:description" content="{description}">
 <meta property="og:image" content="{site_url}/assets/img/logo.png">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="theme-color" content="#06172a">
+<meta name="theme-color" content="#008cd3">
 <link rel="icon" href="assets/img/logo.png" type="image/png">
 <link rel="apple-touch-icon" href="assets/img/logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Source+Serif+4:wght@400;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/style.css">
 <script>document.documentElement.className+=" js";</script>
 <script type="application/ld+json">
-{{"@context":"https://schema.org","@type":"ProfessionalService","name":"HER Consulting LLC","description":"Public Health Awareness. Action. Impact.","url":"{site_url}","email":"{email}","telephone":"{phone}","address":{{"@type":"PostalAddress","addressLocality":"Avon","addressRegion":"IN","postalCode":"46123","addressCountry":"US"}},"founder":{{"@type":"Person","name":"Dr. Omolola (Lola) Olatunde"}}}}
+{{"@context":"https://schema.org","@type":"ProfessionalService","name":"HER Consulting LLC","description":"Public Health Awareness. Action. Impact.","url":"{site_url}","email":"{email}","founder":{{"@type":"Person","name":"Dr. Omolola (Lola) Olatunde"}}}}
 </script>
 </head>
 <body>

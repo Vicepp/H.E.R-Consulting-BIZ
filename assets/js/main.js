@@ -64,6 +64,72 @@
     }
   }
 
+  /* ---------- Subject expert bios: scroll-activated typing ---------- */
+  var expertBios = document.querySelectorAll("[data-expert-bio]");
+  if (expertBios.length) {
+    document.documentElement.classList.add("has-team-scroll");
+
+    if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      var highlightTerms = [
+        "community engagement", "qualitative methodologies", "thematic analysis",
+        "health communication products", "public health programs", "population health research",
+        "statistical modeling", "demographic methods", "data management", "research capacity",
+        "health promotion", "program development", "applied research", "reproductive justice",
+        "behavioral health", "health disparities", "community planning", "data analytics",
+        "quality-of-life improvements", "quantitative analyst", "evidence-based results",
+        "strategic planning", "cybersecurity", "eDiscovery", "epidemiology"
+      ];
+      highlightTerms.sort(function (a, b) { return b.length - a.length; });
+      var termPattern = new RegExp("(" + highlightTerms.join("|") + ")", "gi");
+
+      expertBios.forEach(function (bio) {
+        var fullText = bio.textContent;
+        var charIndex = 0;
+        bio.setAttribute("aria-label", fullText);
+        bio.textContent = "";
+
+        fullText.split(termPattern).forEach(function (chunk) {
+          var isHighlight = highlightTerms.some(function (term) {
+            return term.toLowerCase() === chunk.toLowerCase();
+          });
+          var container = bio;
+          if (isHighlight) {
+            container = document.createElement("mark");
+            container.className = "expert-highlight";
+            container.style.setProperty("--highlight-index", String(charIndex));
+            bio.appendChild(container);
+          }
+
+          Array.from(chunk).forEach(function (character) {
+            if (/\s/.test(character)) {
+              container.appendChild(document.createTextNode(character));
+            } else {
+              var letter = document.createElement("span");
+              letter.className = "expert-char";
+              letter.style.setProperty("--char-index", String(charIndex));
+              letter.textContent = character;
+              container.appendChild(letter);
+            }
+            charIndex += 1;
+          });
+        });
+      });
+
+      if ("IntersectionObserver" in window) {
+        var expertObserver = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (!entry.isIntersecting) return;
+            entry.target.classList.add("is-typing");
+            expertObserver.unobserve(entry.target);
+          });
+        }, { threshold: 0.2, rootMargin: "0px 0px -30px 0px" });
+        expertBios.forEach(function (bio) { expertObserver.observe(bio); });
+      } else {
+        expertBios.forEach(function (bio) { bio.classList.add("is-typing"); });
+      }
+    }
+  }
+
   /* ---------- Animated counters ---------- */
   var counters = document.querySelectorAll("[data-count]");
   if (counters.length) {

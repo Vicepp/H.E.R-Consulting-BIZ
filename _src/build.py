@@ -71,7 +71,7 @@ def service_cards() -> str:
       <p>{s['copy']}</p>
       <a class="textlink" href="{s['href']}">Learn More {I['arrow']}</a>
     </article>""")
-    return '<div class="grid grid--3">' + "".join(out) + "</div>"
+    return '<div class="grid grid--3 service-stack">' + "".join(out) + "</div>"
 
 
 def category_nav(active=None) -> str:
@@ -150,10 +150,16 @@ def home() -> str:
     return f"""<section class="hero">
   <div class="wrap hero__inner">
     <div>
-      <span class="hero__kicker"><b>MBE</b> {L.CERT}</span>
+      <div class="hero__chip">
+        <img src="assets/img/mbe-badge.jpg" alt="" loading="lazy" width="40" height="40">
+        <span>
+          <b>Certified MBE</b>
+          <span>State of Indiana</span>
+        </span>
+      </div>
       <span class="eyebrow">Home Of The</span>
       <h1>Public Health Awareness. <span class="accent">Action. Impact.</span></h1>
-      <p class="hero__sub"><strong style="color:#fff">at HER Consulting LLC</strong><br>{C.MISSION}</p>
+      <p class="hero__sub"><strong>at HER Consulting LLC</strong><br>{C.MISSION}</p>
       <ul class="hero__points">{points}</ul>
       <div class="btn-row">
         <a class="btn" href="services.html">Learn More {I['arrow']}</a>
@@ -167,13 +173,6 @@ def home() -> str:
       </div>
       <div class="hero__frame hero__frame--float">
         <img src="assets/img/hero-b.png" alt="A diverse group of people smiling together" width="864" height="580" loading="lazy">
-      </div>
-      <div class="hero__chip">
-        <img src="assets/img/mbe-badge.jpg" alt="" loading="lazy" width="40" height="40">
-        <span>
-          <b>Certified MBE</b>
-          <span>State of Indiana</span>
-        </span>
       </div>
     </div>
   </div>
@@ -228,7 +227,7 @@ def about() -> str:
       <div class="member__body">
         <span class="member__name">{name}</span>
         <span class="member__role">{role}</span>
-        <p class="member__bio">{bio}</p>
+        <p class="member__bio" data-expert-bio>{bio}</p>
       </div>
     </article>"""
         for img, name, role, bio in C.TEAM
@@ -299,7 +298,7 @@ def about() -> str:
   </div>
 </section>
 
-<section class="section section--tint">
+<section class="section section--tint team-section">
   <div class="wrap">
     <div class="section-head section-head--center reveal">
       <span class="eyebrow">why we're the best</span>
@@ -792,14 +791,6 @@ def contact() -> str:
             <a href="mailto:{L.EMAIL}"><b>Email address</b><span>{L.EMAIL}</span></a>
           </li>
           <li class="info-item">
-            <span class="info-item__icon">{I['pin']}</span>
-            <div><b>Physical address</b><span>{L.ADDRESS}</span></div>
-          </li>
-          <li class="info-item">
-            <span class="info-item__icon">{I['phone']}</span>
-            <a href="tel:{L.PHONE_HREF}"><b>Phone</b><span>{L.PHONE}</span></a>
-          </li>
-          <li class="info-item">
             <span class="info-item__icon">{I['badge']}</span>
             <div><b>Certification</b><span>{L.CERT}</span></div>
           </li>
@@ -871,7 +862,7 @@ PAGES = [
      "Non-profit projects with CICOA Aging and In-Home Services and Direct Relief.", lambda: portfolio_category("nonprofits")),
 
     ("contact.html", "contact", "Contact Us — HER Consulting LLC",
-     "We want to hear from you. Reach HER Consulting LLC in Avon, Indiana by email or phone.", contact),
+      "Contact HER Consulting LLC to discuss public health consulting, program evaluation, and community impact.", contact),
 ]
 
 
@@ -884,7 +875,6 @@ def main() -> None:
             site_url=L.SITE_URL,
             site_name=L.SITE_NAME,
             email=L.EMAIL,
-            phone=L.PHONE,
             header=L.header(active),
             body=builder(),
             footer=L.footer(),
