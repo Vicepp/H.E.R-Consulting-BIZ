@@ -161,6 +161,7 @@ def home() -> str:
       <h1>Public Health Awareness. <span class="accent">Action. Impact.</span></h1>
       <p class="hero__sub"><strong>at HER Consulting LLC</strong><br>{C.MISSION}</p>
       <ul class="hero__points">{points}</ul>
+      <span class="hero__kicker"><b>MBE</b> {L.CERT}</span>
       <div class="btn-row">
         <a class="btn" href="services.html">Learn More {I['arrow']}</a>
         <a class="btn btn--outline-light" href="contact.html">Contact us</a>

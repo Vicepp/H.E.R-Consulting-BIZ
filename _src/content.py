@@ -156,31 +156,31 @@ TEAM = [
         "team-temitope.jpg",
         "TEMITOPE ADEOYE OLENLOA, PhD",
         "Equity-Focused Learning &amp; Applied Research Strategy",
-        "Temitope Adeoye Olenloa is an applied researcher advancing equity in education, workforce, and community systems. She designs culturally responsive environments, facilitates planning, and helps organizations turn data into action, centering communities historically excluded from decisions.",
+        "Dr. Temitope Adeoye Olenloa is an applied researcher advancing equity in education, workforce, and community systems. She designs culturally responsive environments, facilitates planning, and helps organizations turn data into action, centering communities historically excluded from decisions.",
     ),
     (
         "team-olusola.jpg",
-        "DR. OLUSOLA OMISAKIN",
+        "OLUSOLA OMISAKIN, PhD",
         "Quantitative Analyst &amp; Demographer",
         "Dr. Olusola Omisakin is a quantitative analyst and demographer specializing in population health research. He applies demographic methods, statistical modeling, and data management to translate complex findings into actionable insights for policy, program development, and organizational decision-making.",
     ),
     (
         "team-hadya.jpg",
-        "HADYA SOW",
+        "HADYA SOW, MPH",
         "Qualitative Research &amp; Health Communications",
-        "With a strong foundation in community engagement and qualitative methodologies, Hadya Sow specializes in translating lived experiences and stakeholder perspectives into evidence-based results. She is experienced in utilizing thematic analysis and storytelling to evaluate and elevate health communication products and public health programs.",
+        "With a strong foundation in community engagement and qualitative methodologies, Hadya Sow specializes in translating lived experiences and community and partner perspectives into evidence-based results. She is experienced in utilizing thematic analysis and storytelling to evaluate and elevate health communication products and public health programs.",
     ),
     (
         "team-molly.jpg",
-        "DR MOLLY A. NICHOLS",
+        "MOLLY A. NICHOLS, PharmD, MS, MATS",
         "SUBSTANCE USE &amp; BEHAVIORAL HEALTH",
-        "Molly Nichols is a pharmacist and health services researcher who specializes in substance use education and research. Her work highlights the voices of people with lived experience and emphasizes evidence-based, person-centered care. She strives to lead with love and create meaningful programming that transforms heads and hearts about people who use drugs.",
+        "Dr. Molly Nichols is a pharmacist and health services researcher who specializes in substance use education and research. Her work highlights the voices of people with lived experience and emphasizes evidence-based, person-centered care. She strives to lead with love and create meaningful programming that transforms heads and hearts about people who use drugs.",
     ),
     (
         "team-darleesa.jpg",
-        "DR DARLEESA ROSS",
+        "DARLEESA ROSS, PhD",
         "Public Health Advocate and Research",
-        "Dr. Derlessa's experience in an underserved community drives her work in reducing health disparities. She leads research on hypertension, diabetes, and vaccine hesitancy and develops community-based interventions while serving on public health committees to improve health at local, state, and national levels.",
+        "Dr. Darleesa Ross’s experience in an underserved community drives her work in reducing health disparities. She leads research on hypertension, diabetes, and vaccine hesitancy and develops community-based interventions while serving on public health committees to improve health at local, state, and national levels.",
     ),
     (
         "team-symone.jpg",
@@ -192,7 +192,7 @@ TEAM = [
         "team-jason.jpg",
         "JASON A. WARE, PhD",
         "Community Planning &amp; Quality of Life Innovation",
-        "Jason Ware is a scholar and strategist who helps communities define and achieve what thriving looks like. His work connects lived experience with evidence-based tools to drive quality-of-life improvements in place-based planning. He brings over a decade of experience in community-led development, higher education equity, and public sector collaboration.",
+        "Dr. Jason Ware is a scholar and strategist who helps communities define and achieve what thriving looks like. His work connects lived experience with evidence-based tools to drive quality-of-life improvements in place-based planning. He brings over a decade of experience in community-led development, higher education equity, and public sector collaboration.",
     ),
 ]
 
